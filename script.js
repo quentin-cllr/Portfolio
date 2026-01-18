@@ -47,26 +47,34 @@ if (heroName) {
 /* SKILLS DATA (images dans /pics) */
 const SKILLS = {
     languages: [
-        { name: "C#", img: "pics/csharp.png", desc: "Programmation c#." },
-        { name: "JavaScript", img: "pics/js.png", desc: "Langage web principal." },
-        { name: "HTML", img: "pics/html.png", desc: "Structure des pages web." },
-        { name: "Python", img: "pics/python.png", desc: "Scripts et automatisation." },
-        { name: "CSS", img: "pics/css.png", desc: "Style des pages web." },
-        { name: "PHP", img: "pics/php.png", desc: "Backend web." }
+        { name: "C#", img: "pics/languages/csharp.png", desc: "Applications desktop, POO" },
+        { name: "JavaScript", img: "pics/languages/js.png", desc: "DOM, async, appels API REST" },
+        { name: "HTML", img: "pics/languages/html.png", desc: "Structure sémantique des pages" },
+        { name: "Python", img: "pics/languages/python.png", desc: "Scripts, automatisation" },
+        { name: "CSS", img: "pics/languages/css.png", desc: "Responsive, Flexbox, UI/UX" },
+        { name: "PHP", img: "pics/languages/php.png", desc: "Back-end web, CRUD, sessions" }
     ],
-    systems: [
-        { name: "Docker", img: "pics/docker.png", desc: "Conteneurisation." },
-        { name: "Linux", img: "pics/linux.png", desc: "Environnements techniques." },
-        { name: "Windows", img: "pics/windows.png", desc: "Administration de base." },
-        { name: "Bash", img: "pics/bash.png", desc: "Scripting et automatisation." }
+
+    tools: [
+        { name: "GitHub", img: "pics/tools/github.png", desc: "Gestion de projets, branches" },
+        { name: "Docker", img: "pics/tools/docker.png", desc: "Conteneurisation de projets simples" },
+        { name: "Linux", img: "pics/tools/linux.png", desc: "Commandes, environnement" },
+        { name: "Bash", img: "pics/tools/bash.png", desc: "Scripts et automatisation" },
+        { name: "Windows", img: "pics/tools/windows.png", desc: "Environnement de développement" },
+        { name: "Raspberry Pi", img: "pics/tools/raspberry.png", desc: "Projets techniques légers et serveur" }
     ],
-    network: [
-        { name: "Raspberry Pi", img: "pics/raspberry.png", desc: "Projets matériels." },
-        { name: "SQL", img: "pics/sql.png", desc: "Bases de données relationnelles." },
-        { name: "Réseaux", img: "pics/network.png", desc: "Bases TCP/IP." },
-        { name: "GitHub", img: "pics/github.png", desc: "Gestion de versions." },
+
+    dev: [
+        { name: "POO", img: "pics/dev/poo1.png", desc: "Classes, interfaces, conception" },
+        { name: "Développement web", img: "pics/dev/www.png", desc: "Front-end et back-end" },
+        { name: "API REST", img: "pics/dev/api.png", desc: "Routes CRUD, échanges JSON" },
+        { name: "Bases de données", img: "pics/dev/database.png", desc: "Modélisation, requêtes SQL" },
+        { name: "Client / serveur", img: "pics/dev/serveur-client.png", desc: "Requêtes, réponses, découplage" },
+        { name: "Réseaux", img: "pics/dev/network.png", desc: "Fondamentales : TCP/IP, HTTP, DNS" }
     ]
 };
+
+
 /* =========================
    COMPETENCES – MODE LISTE / CAROUSEL
    ========================= */
