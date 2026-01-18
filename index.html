@@ -1,138 +1,171 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quentin Coullery – Portfolio</title>
-  <meta name="description" content="Portfolio de Quentin Coullery, étudiant en informatique orienté cybersécurité.">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quentin Coullery – Portfolio</title>
+    <meta name="description" content="Portfolio de Quentin Coullery." />
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+    <header id="header">
+        <div class="nav container">
+            <div class="logo">Quentin Coullery</div>
 
-<header id="header">
-  <div class="nav container">
-    <div class="logo">Quentin Coullery</div>
+            <nav class="nav-links desktop">
+                <a href="#accueil">Accueil</a>
+                <a href="#apropos">À propos</a>
+                <a href="#competences">Compétences</a>
+                <a href="#projets">Projets</a>
+                <a href="#contact">Contact</a>
+                <a href="Quentin_Coullery_CV.pdf" target="_blank" class="cv">CV</a>
+            </nav>
 
-    <nav class="nav-links desktop">
-      <a href="#accueil">Accueil</a>
-      <a href="#apropos">À propos</a>
-      <a href="#competences">Compétences</a>
-      <a href="#projets">Projets</a>
-      <a href="#contact">Contact</a>
-      <a href="cv.pdf" target="_blank" class="cv">CV</a>
-    </nav>
-
-    <button id="burger" class="burger mobile">☰</button>
-  </div>
-
-  <nav id="mobileMenu" class="mobile-menu">
-    <a href="#accueil">Accueil</a>
-    <a href="#apropos">À propos</a>
-    <a href="#competences">Compétences</a>
-    <a href="#projets">Projets</a>
-    <a href="#contact">Contact</a>
-    <a href="cv.pdf" target="_blank">CV</a>
-  </nav>
-</header>
-
-<main>
-
-<section id="accueil" class="section hero">
-  <div class="hero-content">
-    <h1>Quentin</h1>
-    <h2>Étudiant en informatique</h2>
-    <p class="details">(CFPT Informatique – 2e année, parcours accéléré)</p>
-  </div>
-</section>
-
-<section id="apropos" class="section">
-  <div class="container narrow">
-    <h3>À propos</h3>
-    <p>
-      Étudiant en informatique orienté systèmes et cybersécurité.
-      J’aime comprendre le fonctionnement interne des outils et des infrastructures.
-    </p>
-    <p>
-      Je développe mes compétences via des projets personnels et scolaires,
-      notamment en programmation, Linux et réseaux.
-    </p>
-    <p>
-      Objectif : master en cybersécurité à l’EPFL.
-    </p>
-  </div>
-</section>
-
-<section id="competences" class="section">
-  <div class="container">
-    <h3>Compétences</h3>
-
-    <div class="skills-grid">
-
-      <div class="skill-block" data-block="languages">
-        <h4>Langages</h4>
-        <div class="carousel">
-          <div class="logo-box left"><img></div>
-          <div class="logo-box main"><img></div>
-          <div class="logo-box right"><img></div>
+            <button id="burger" class="burger mobile" aria-label="Ouvrir le menu">☰</button>
         </div>
-        <h5 class="skill-name"></h5>
-        <p class="skill-desc"></p>
-      </div>
 
-      <div class="skill-block" data-block="systems">
-        <h4>Systèmes & outils</h4>
-        <div class="carousel">
-          <div class="logo-box left"><img></div>
-          <div class="logo-box main"><img></div>
-          <div class="logo-box right"><img></div>
-        </div>
-        <h5 class="skill-name"></h5>
-        <p class="skill-desc"></p>
-      </div>
+        <nav id="mobileMenu" class="mobile-menu">
+            <a href="#accueil">Accueil</a>
+            <a href="#apropos">À propos</a>
+            <a href="#competences">Compétences</a>
+            <a href="#projets">Projets</a>
+            <a href="#contact">Contact</a>
+            <a href="Quentin_Coullery_CV.pdf" target="_blank">CV</a>
+        </nav>
+    </header>
 
-      <div class="skill-block" data-block="network">
-        <h4>Réseaux & matériel</h4>
-        <div class="carousel">
-          <div class="logo-box left"><img></div>
-          <div class="logo-box main"><img></div>
-          <div class="logo-box right"><img></div>
-        </div>
-        <h5 class="skill-name"></h5>
-        <p class="skill-desc"></p>
-      </div>
+    <main>
+        <!-- ACCUEIL -->
+        <section id="accueil" class="section hero">
+            <div class="hero-content">
+                <h1 id="heroName">Quentin Coullery</h1>
+                <h2>Étudiant en informatique</h2>
+                <p class="details">(CFPT Informatique – 2e année, parcours accéléré)</p>
+            </div>
+        </section>
 
-    </div>
-  </div>
-</section>
+        <!-- A PROPOS -->
+        <section id="apropos" class="section apropos">
+            <div class="container narrow">
+                <h3>À propos</h3>
+                <p>
+                    Etudiant en informatique au CFPT, je m’int´eresse particuli`erement `a la cybers´ecurit´e et
+                    souhaite continuer
+                    mes ´etudes `a l’EPFL. Je fais preuve de s´erieux et d’organisation dans mon travail, et j’accorde
+                    une grande
+                    importance `a la collaboration.
+                </p>
+            </div>
+        </section>
 
-<section id="projets" class="section">
-  <div class="container">
-    <h3>Projets</h3>
-    <div id="projectsGrid" class="projects-grid"></div>
-  </div>
-</section>
+        <!-- COMPETENCES -->
+        <section id="competences" class="section">
+            <div class="container">
 
-<section id="contact" class="section contact">
-  <div class="container contact-layout">
-    <h3>Contact</h3>
-    <p class="contact-text">
-      Tu peux me contacter ou consulter mes projets et mon CV via les liens ci-dessous.
-    </p>
-    <div class="contact-links">
-      <a href="mailto:qcoullery@gmail.com">qcoullery@gmail.com</a>
-      <a href="https://github.com/quentin-cllr" target="_blank">GitHub</a>
-      <a href="cv.pdf" target="_blank">CV</a>
-    </div>
-  </div>
+                <div class="skills-header">
+                    <h3>Compétences</h3>
+                    <button id="skillsViewToggle">Voir en liste</button>
+                </div>
 
-  <footer>
-    © <span id="year"></span> Quentin Coullery
-  </footer>
-</section>
+                <div class="skills-grid">
 
-</main>
+                    <div class="skill-block" data-block="languages">
+                        <h4>Langages</h4>
 
-<script src="script.js"></script>
+                        <ul class="skills-list">
+                            <!-- rempli en JS -->
+                        </ul>
+
+                        <div class="carousel">
+                            <button class="arrow left">‹</button>
+
+                            <div class="item left"><img></div>
+                            <div class="item center"><img></div>
+                            <div class="item right"><img></div>
+
+                            <button class="arrow right">›</button>
+                        </div>
+
+
+                        <h5 class="skill-name"></h5>
+                        <p class="skill-desc"></p>
+                    </div>
+
+                    <div class="skill-block" data-block="systems">
+                        <h4>Systèmes & outils</h4>
+
+                        <ul class="skills-list"></ul>
+
+                        <div class="carousel">
+                            <button class="arrow left">‹</button>
+
+                            <div class="item left"><img></div>
+                            <div class="item center"><img></div>
+                            <div class="item right"><img></div>
+
+                            <button class="arrow right">›</button>
+                        </div>
+
+
+                        <h5 class="skill-name"></h5>
+                        <p class="skill-desc"></p>
+                    </div>
+
+                    <div class="skill-block" data-block="network">
+                        <h4>Réseaux & matériel</h4>
+
+                        <ul class="skills-list"></ul>
+
+                        <div class="carousel">
+                            <button class="arrow left">‹</button>
+
+                            <div class="item left"><img></div>
+                            <div class="item center"><img></div>
+                            <div class="item right"><img></div>
+
+                            <button class="arrow right">›</button>
+                        </div>
+
+
+                        <h5 class="skill-name"></h5>
+                        <p class="skill-desc"></p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- PROJETS -->
+        <section id="projets" class="section">
+            <div class="container">
+                <h3>Projets</h3>
+                <div id="projectsGrid" class="projects-grid">
+                    <div class="project-skeleton">Chargement des projets…</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="section contact">
+            <div class="container">
+                <h3>Contact</h3>
+                <div class="contact-links">
+                    <a href="mailto:qcoullery@gmail.com">qcoullery@gmail.com</a>
+                    <a href="https://github.com/quentin-cllr" target="_blank" rel="noreferrer">GitHub</a>
+                    <a href="Quentin_Coullery_CV.pdf" target="_blank">CV</a>
+                </div>
+            </div>
+
+            <footer>
+                © <span id="year"></span> Quentin Coullery
+            </footer>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
