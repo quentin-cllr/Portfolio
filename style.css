@@ -95,7 +95,7 @@ header.visible {
     height: 2px;
     background: linear-gradient(90deg,
             transparent,
-            var(--accent),
+            #7d5cffcc,
             transparent);
     transform: scaleX(0);
     transform-origin: center;
@@ -494,8 +494,8 @@ h5 {
     transition: color .35s ease, text-shadow .35s ease;
 }
 
-.contact-links a:hover{
-  color: #c7b9ff;
+.contact-links a:hover {
+    color: #c7b9ff;
 }
 
 footer {
