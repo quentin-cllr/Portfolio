@@ -4,6 +4,32 @@ window.addEventListener("scroll", () => {
     header.classList.toggle("visible", window.scrollY > 60);
 });
 
+document.getElementById("arrowstart").addEventListener("click", () => {
+    const target = document.getElementById("apropos");
+    const start = window.scrollY;
+    const end = target.offsetTop;
+    const duration = 500;
+
+    let startTime = null;
+
+    function scrollStep(timestamp) {
+        if (!startTime) startTime = timestamp;
+        const progress = timestamp - startTime;
+        const percent = Math.min(progress / duration, 1);
+
+        window.scrollTo(0, start + (end - start) * percent);
+
+        if (progress < duration) {
+            requestAnimationFrame(scrollStep);
+        }
+    }
+
+    requestAnimationFrame(scrollStep);
+});
+
+
+
+
 /* BURGER */
 const burger = document.getElementById("burger");
 const mobileMenu = document.getElementById("mobileMenu");
