@@ -1,9 +1,9 @@
-/* HEADER */
+// HEADER
 const header = document.getElementById("header");
 window.addEventListener("scroll", () => {
     header.classList.toggle("visible", window.scrollY > 60);
 });
-
+// FLECHE START
 document.getElementById("arrowstart").addEventListener("click", () => {
     const target = document.getElementById("apropos");
     const start = window.scrollY;
@@ -27,10 +27,7 @@ document.getElementById("arrowstart").addEventListener("click", () => {
     requestAnimationFrame(scrollStep);
 });
 
-
-
-
-/* BURGER */
+// BURGER
 const burger = document.getElementById("burger");
 const mobileMenu = document.getElementById("mobileMenu");
 
@@ -41,10 +38,10 @@ document.querySelectorAll(".mobile-menu a").forEach(link => {
     link.addEventListener("click", () => mobileMenu.classList.remove("open"));
 });
 
-/* YEAR */
+// YEAR
 document.getElementById("year").textContent = new Date().getFullYear();
 
-/* SECTION FADE : rejoue */
+// SECTION FADE
 const sections = document.querySelectorAll(".section");
 const io = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -54,7 +51,7 @@ const io = new IntersectionObserver((entries) => {
 }, { threshold: 0.25 });
 sections.forEach(sec => io.observe(sec));
 
-/* H1 lettres : wrap */
+// H1
 const heroName = document.getElementById("heroName");
 if (heroName) {
     const text = heroName.textContent;
@@ -70,7 +67,7 @@ if (heroName) {
     }
 }
 
-/* SKILLS DATA (images dans /pics) */
+// SKILLS DATA
 const SKILLS = {
     languages: [
         { name: "C#", img: "pics/languages/csharp.png", desc: "Applications desktop, POO" },
@@ -100,15 +97,10 @@ const SKILLS = {
     ]
 };
 
-
-/* =========================
-   COMPETENCES – MODE LISTE / CAROUSEL
-   ========================= */
-
+// COMPETENCES LISTES
 const competencesSection = document.getElementById("competences");
 const toggleBtn = document.getElementById("skillsViewToggle");
 
-/* remplir les listes */
 document.querySelectorAll(".skill-block").forEach(block => {
     const key = block.dataset.block;
     const data = SKILLS[key];
@@ -126,15 +118,12 @@ document.querySelectorAll(".skill-block").forEach(block => {
     });
 });
 
-/* toggle vue */
 toggleBtn.addEventListener("click", () => {
     const isList = competencesSection.classList.toggle("list-view");
     toggleBtn.textContent = isList ? "Voir en carousel" : "Voir en liste";
 });
 
-/* =========================
-   COMPETENCES – CAROUSEL 3D (FIX)
-   ========================= */
+// COMPETENCES CAROUSEL
 document.querySelectorAll(".skill-block").forEach(block => {
     const key = block.dataset.block;
     const data = SKILLS[key];
@@ -221,7 +210,7 @@ document.querySelectorAll(".skill-block").forEach(block => {
     descEl.classList.add("show");
 });
 
-/* PROJETS */
+// PROJETS
 const USER = "quentin-cllr";
 const grid = document.getElementById("projectsGrid");
 

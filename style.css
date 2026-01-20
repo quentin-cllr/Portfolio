@@ -1,3 +1,4 @@
+/* STYLE DE BASE */
 :root {
     --bg-main: #0f0f14;
     --bg-card: #181825;
@@ -26,7 +27,6 @@ body {
     line-height: 1.6;
 }
 
-/* Sections : fade rejouable via JS */
 .section {
     padding: 90px 20px;
     opacity: 0;
@@ -70,7 +70,6 @@ header.visible {
     align-items: center;
     padding: 22px 20px;
     min-width: 90%;
-    /* border: solid red; */
 }
 
 .logo {
@@ -156,7 +155,6 @@ header.visible {
     }
 }
 
-
 .cv {
     color: var(--accent);
 }
@@ -170,7 +168,7 @@ header.visible {
     display: none;
 }
 
-/* HERO */
+/* TITRE */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -189,7 +187,6 @@ h1 {
     line-height: 1.05;
 }
 
-/* Lettres du H1 : fade couleur */
 .letter {
     display: inline-block;
     transition: color .20s ease;
@@ -211,7 +208,7 @@ h2 {
     margin-top: 14px;
 }
 
-/* Titres */
+/* TITRES */
 h3 {
     font-size: 3.1rem;
     margin-bottom: 40px;
@@ -226,7 +223,7 @@ h5 {
     font-size: 1.55rem;
 }
 
-/* A PROPOS : pas de margin négatif, remonte uniquement via fade/translate */
+/* A PROPOS */
 .apropos {
     padding-top: 80px;
 }
@@ -251,7 +248,7 @@ h5 {
     transform: translateY(6px);
 }
 
-/* CAROUSEL : non penché + impression de “tourner” (par déplacement + profondeur) */
+/* CAROUSEL */
 .carousel {
     position: relative;
     height: 96px;
@@ -268,28 +265,24 @@ h5 {
     cursor: pointer;
 }
 
-/* CENTRE */
 .item.center {
     transform: translate(-50%, -50%) translateX(0) scale(1.4);
     opacity: 1;
     z-index: 3;
 }
 
-/* GAUCHE */
 .item.left {
     transform: translate(-50%, -50%) translateX(-160%) scale(.70) translateY(30%);
     opacity: .4;
     z-index: 1;
 }
 
-/* DROITE */
 .item.right {
     transform: translate(-50%, -50%) translateX(160%) scale(.70) translateY(30%);
     opacity: .3;
     z-index: 1;
 }
 
-/* L'image ne capte jamais le clic */
 .carousel img {
     width: 100%;
     height: 100%;
@@ -328,19 +321,15 @@ h5 {
     padding-left: 60px;
 }
 
-
-
 .arrow:hover {
     color: var(--accent);
     transform: translateY(-52%) scale(1.10);
 }
 
-/* cacher les flèches en mode liste */
 #competences.list-view .arrow {
     display: none;
 }
 
-/* Texte skills */
 .skill-name,
 .skill-desc {
     opacity: 0;
@@ -359,7 +348,6 @@ h5 {
 }
 
 /* LISTES */
-
 .skills-header {
     display: flex;
     justify-content: space-between;
@@ -386,7 +374,6 @@ h5 {
     border-color: var(--accent);
 }
 
-/* LISTE DES COMPÉTENCES — VERSION STYLÉE */
 .skills-list {
     list-style: none;
     margin-top: 24px;
@@ -397,7 +384,6 @@ h5 {
     gap: 14px 20px;
 }
 
-/* item */
 .skills-list li {
     display: flex;
     align-items: center;
@@ -416,14 +402,12 @@ h5 {
     transform: translateY(-2px);
 }
 
-/* logo */
 .skills-list img {
     width: 26px;
     height: 26px;
     object-fit: contain;
 }
 
-/* cacher le carousel */
 #competences.list-view .carousel {
     display: none;
 }
@@ -432,12 +416,10 @@ h5 {
     display: none;
 }
 
-/* afficher la liste */
 #competences.list-view .skills-list {
     display: grid;
 }
 
-/* cacher le nom + description animés */
 #competences.list-view .skill-name,
 #competences.list-view .skill-desc {
     display: none;
@@ -486,7 +468,6 @@ h5 {
     position: relative;
     transition: color .6s ease;
 }
-
 
 .project-link::after {
     content: "";
@@ -552,9 +533,8 @@ footer {
     color: var(--text-muted);
 }
 
-/* MOBILE */
+/* DIFFERENTES TAILLE */
 @media(max-width:840px) {
-
     .desktop {
         display: none;
     }
@@ -632,10 +612,10 @@ footer {
     }
 
     #skillsViewToggle {
-        min-width: 10px;
+        min-width: 120px;
         width: 80px;
-        height: 28px;
-        font-size: 9px;
+        height: 35px;
+        font-size: 14px;
     }
 
     .logo {
@@ -656,8 +636,6 @@ footer {
     }
 }
 
-
-
 @media (max-width: 1200px) {
     .arrowStart {
         margin-top: 25%;
@@ -670,8 +648,6 @@ footer {
         border-right: 4px solid var(--accent);
         margin: -8px;
     }
-
-
 }
 
 @media (max-width: 1080px) {
@@ -691,5 +667,10 @@ footer {
         border-bottom: 3px solid var(--accent);
         border-right: 3px solid var(--accent);
         margin: -6px;
+    }
+
+    .hero {
+        margin-top: -30%;
+        margin-bottom: 10%;
     }
 }
