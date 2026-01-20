@@ -366,6 +366,11 @@ h5 {
     font-size: .9rem;
     transition: color .25s ease, border-color .25s ease;
     min-width: 110px;
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    align-items: center;
+    justify-content: center;
 }
 
 #skillsViewToggle:hover {
